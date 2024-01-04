@@ -4,7 +4,8 @@ const PRONOUNS = {
     "2nd person singular": ["you", "your", "yourself"]
 }
 
-CASE_SENSITIVE = ["I"]
+// Terms here must be uppercased e.g. "CUSTOMER"
+const CASE_SENSITIVE = ["I"]
 
 /**
  * Determines whether a given term should be considered case sensitive in the search.
@@ -12,7 +13,7 @@ CASE_SENSITIVE = ["I"]
  * @returns {boolean} denoting whether the term is case sensitive
  */
 function isTermCaseSensitive(term) {
-    return CASE_SENSITIVE.includes(term.toLowerCase()) || CASE_SENSITIVE.includes(term.toUpperCase())
+    return CASE_SENSITIVE.includes(term.toUpperCase())
 }
 
 /**
